@@ -5,10 +5,10 @@
 	<body ng-controller="arrayController">
 
 		<div>
-			<input type="text" placeholder="FILTER"></input>
+			<input type="text" placeholder="FILTER" ng-model="filter"></input>
 		</div>
 
-		<div ng-repeat="array in array">
+		<div ng-repeat="array in array | filter:filter">
 			<span>{{array.name}}</span>
 			<span>{{array.email}}</span>
 			<span>{{array.dateEmployed}}</span>
